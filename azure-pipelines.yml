@@ -41,8 +41,8 @@ steps:
     versionSpec: 4.9.3
 
 - task: NuGetCommand@2
-  displayName: 'NuGet push'
   inputs:
-    command: push
-    publishVstsFeed: 'Tailspin.SpaceGame.Web.Models'
-    allowPackageConflicts: true
+    command: 'restore'
+    restoreSolution: '**/*.sln'
+    feedsToUse: 'select'
+    vstsFeed: '3ec2674d-cdcb-4394-9b51-c2b5c31475c8/19a1361d-b829-4053-b471-1220df149ff9'
