@@ -35,8 +35,11 @@ steps:
     minorVersion: '0'
     patchVersion: '0'
 
-- task: NuGetAuthenticate@0
-  displayName: 'NuGet Authenticate'
+- task: NuGetToolInstaller@0
+  displayName: 'Use NuGet 4.9.3'
+  inputs:
+    versionSpec: 4.9.3
+
 - task: NuGetCommand@2
   displayName: 'NuGet push'
   inputs:
